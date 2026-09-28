@@ -1,0 +1,69 @@
+# Conteúdo privado e material local de apoio
+/carreira/
+/docs/
+/etc/
+[Cc]ertificados/
+*.[pP][dD][fF]
+
+# Ambiente e segredos
+.env*
+.npmrc
+.netrc
+credentials*.json
+secrets*.json
+secret*.txt
+*.pem
+*.key
+*.crt
+*.cer
+*.der
+*.p12
+*.pfx
+*.jks
+*.keystore
+id_rsa*
+id_ed25519*
+
+# Dependências e artefatos de build/teste
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+.npm/
+.parcel-cache/
+.next/
+.eslintcache
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Temporários, editores e sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+tmp/
+temp/
+.tmp/
+
+# Backups, bancos e dumps
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+*.dump
+*.dmp
+*.sql
+*.sqlite
+*.sqlite3
+*.db

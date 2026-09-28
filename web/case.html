@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Detalhe sanitizado de um case profissional de tecnologia, produto e processos."
+    />
+    <meta name="theme-color" content="#05070a" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Three Lenses" />
+    <meta property="og:title" content="Cases Profissionais | Three Lenses" />
+    <meta
+      property="og:description"
+      content="Detalhes sanitizados de cases profissionais em tecnologia, produto e processos."
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Cases Profissionais | Three Lenses" />
+    <meta
+      name="twitter:description"
+      content="Detalhes sanitizados de cases profissionais em tecnologia, produto e processos."
+    />
+    <title>Cases Profissionais | Three Lenses</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./cases.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+    <div class="ambient-grid" aria-hidden="true"></div>
+
+    <header class="site-header shell">
+      <a class="brand" href="./index.html" aria-label="Voltar à página inicial">
+        <span class="brand-mark" aria-hidden="true">TL/</span>
+        <span>three lenses // v1</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a href="./index.html">Home</a>
+        <a href="./sobre.html">Sobre</a>
+        <a href="./experiencia.html">Experiência</a>
+        <a href="./index.html#cases" aria-current="page">Cases</a>
+        <a href="./formacao.html">Formação</a>
+        <a href="./competencias.html">Competências</a>
+        <a href="./conteudos.html">Conteúdos</a>
+        <a href="./contato.html">Contato</a>
+      </nav>
+    </header>
+
+    <main class="case-page" id="conteudo">
+      <section class="case-hero shell" data-case-view>
+        <div>
+          <p class="case-kicker" data-case-kicker>case // --</p>
+          <h1 data-case-title>Carregando case...</h1>
+          <p class="case-hero-summary" data-case-summary></p>
+        </div>
+        <aside class="case-hero-meta" aria-label="Status e competências do case">
+          <span class="case-status" data-case-status>preview sanitizado</span>
+          <ul class="tag-list" data-case-tags></ul>
+        </aside>
+      </section>
+
+      <section class="case-body" data-case-view>
+        <div class="shell">
+          <div class="case-body-intro">
+            <div>
+              <h2>O cenário por trás da solução.</h2>
+            </div>
+            <p data-case-context></p>
+          </div>
+
+          <div class="case-panel-grid">
+            <article class="case-panel">
+              <h2>O problema</h2>
+              <p data-case-challenge></p>
+            </article>
+
+            <article class="case-panel">
+              <h2>Contribuições</h2>
+              <ul class="contribution-list" data-case-contributions></ul>
+            </article>
+
+            <article class="case-panel">
+              <h2>Entrega</h2>
+              <p data-case-result></p>
+            </article>
+
+            <article class="case-panel">
+              <h2>O que ficou</h2>
+              <p data-case-learning></p>
+            </article>
+          </div>
+
+          <aside class="privacy-note">
+            <strong>limite público</strong>
+            <span>
+              Este recorte omite identidade corporativa, URLs, IPs, credenciais,
+              identificadores, configurações e dados internos. A documentação completa
+              permanece em revisão antes de qualquer publicação.
+            </span>
+          </aside>
+
+          <nav class="case-pagination" aria-label="Navegação entre cases">
+            <a data-previous-case href="#"><span aria-hidden="true">←</span> Case anterior</a>
+            <a data-next-case href="#">Próximo case <span aria-hidden="true">→</span></a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="case-error shell" data-case-error hidden>
+        <p class="eyebrow">case // não encontrado</p>
+        <h1>Esse case não está disponível.</h1>
+        <p>Volte à seleção principal para escolher um dos seis previews sanitizados.</p>
+        <a class="button button-primary" href="./index.html#cases">Ver todos os cases</a>
+      </section>
+    </main>
+
+    <footer class="site-footer shell">
+      <span>Preview sanitizado</span>
+      <span>Three Lenses // 2026</span>
+    </footer>
+  </body>
+</html>
