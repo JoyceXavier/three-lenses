@@ -143,8 +143,7 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(300px, 0.75fr);
-  gap: clamp(3rem, 7vw, 7rem);
+  grid-template-columns: minmax(0, 960px);
   align-items: center;
   min-height: calc(100vh - 88px);
   padding-block: 6rem;
@@ -239,101 +238,9 @@ h1 {
   background: var(--blue-soft);
 }
 
-.system-card {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  background: linear-gradient(145deg, rgba(16, 23, 33, 0.94), rgba(7, 11, 16, 0.8));
-  box-shadow: var(--shadow);
-}
-
-.system-card::before {
-  position: absolute;
-  top: 0;
-  left: 12%;
-  width: 76%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--blue), var(--green), transparent);
-  content: "";
-}
-
-.system-card-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1.15rem 1.35rem;
-  border-bottom: 1px solid var(--line);
-  color: var(--muted);
-  font-family: var(--mono);
-  font-size: 0.72rem;
-}
-
-.status-light {
-  color: var(--green);
-}
-
-.status-light::before {
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  margin-right: 0.45rem;
-  border-radius: 50%;
-  background: var(--green);
-  box-shadow: 0 0 12px var(--green);
-  content: "";
-}
-
-.system-list {
-  margin: 0;
-  padding: 0.7rem 1.35rem;
-}
-
-.system-list div {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.system-list div:last-child {
-  border-bottom: 0;
-}
-
-.system-list dt,
-.system-list dd {
-  margin: 0;
-  font-family: var(--mono);
-  font-size: 0.73rem;
-}
-
-.system-list dt {
-  color: var(--muted);
-}
-
-.system-list dd {
-  color: var(--text);
-  text-align: right;
-}
-
-.system-note {
-  margin: 0;
-  padding: 1.2rem 1.35rem;
-  color: #b5c3d0;
-  background: var(--blue-soft);
-  font-size: 0.78rem;
-}
-
 .section {
   padding-block: clamp(5rem, 10vw, 8rem);
   border-top: 1px solid var(--line);
-}
-
-.vision {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-  gap: clamp(3rem, 8vw, 8rem);
-  align-items: end;
 }
 
 .section-heading h2,
@@ -676,6 +583,10 @@ h1 {
 .competency-preview-card p {
   margin: 0;
   color: var(--muted);
+}
+
+.competency-preview-card .competency-preview-tags {
+  margin: 1.25rem 0 0;
 }
 
 .competencies-preview-action {
@@ -2324,6 +2235,62 @@ h1 {
   gap: 0.7rem;
 }
 
+.about-preview-action,
+.experience-preview-action,
+.competencies-preview-action,
+.education-preview-action,
+.content-preview-action {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(75, 141, 255, 0.28);
+  background:
+    radial-gradient(circle at 92% 12%, rgba(83, 243, 155, 0.1), transparent 15rem),
+    linear-gradient(125deg, rgba(75, 141, 255, 0.1), transparent 48%),
+    rgba(255, 255, 255, 0.018);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.about-preview-action::before,
+.experience-preview-action::before,
+.competencies-preview-action::before,
+.education-preview-action::before,
+.content-preview-action::before {
+  position: absolute;
+  inset: 0 32% auto 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--blue), var(--green), transparent);
+  content: "";
+}
+
+.about-preview-action p,
+.experience-preview-action p,
+.competencies-preview-action p,
+.education-preview-action p,
+.content-preview-action p {
+  color: #c5d2df;
+}
+
+.about-preview-action .button-secondary,
+.experience-preview-action .button-secondary,
+.competencies-preview-action .button-secondary,
+.education-preview-action .button-secondary,
+.content-preview-action .button-secondary {
+  border-color: rgba(83, 243, 155, 0.34);
+  color: var(--green);
+  background: var(--green-soft);
+  box-shadow: 0 8px 26px rgba(83, 243, 155, 0.08);
+}
+
+.about-preview-action .button-secondary:hover,
+.experience-preview-action .button-secondary:hover,
+.competencies-preview-action .button-secondary:hover,
+.education-preview-action .button-secondary:hover,
+.content-preview-action .button-secondary:hover {
+  border-color: rgba(75, 141, 255, 0.5);
+  color: var(--text);
+  background: var(--blue-soft);
+}
+
 .content-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.72fr);
@@ -2869,7 +2836,6 @@ h1 {
   }
 
   .hero,
-  .vision,
   .cases-intro,
   .checkpoint-panel,
   .case-hero,
@@ -2901,10 +2867,6 @@ h1 {
   .hero {
     min-height: auto;
     padding-block: 5rem;
-  }
-
-  .system-card {
-    max-width: 540px;
   }
 
   .pillar-grid {
@@ -3017,6 +2979,48 @@ h1 {
     width: min(100% - 28px, 1160px);
   }
 
+  .hero {
+    min-height: auto;
+    padding-block: 4.5rem 5rem;
+  }
+
+  .hero-intro {
+    margin-top: 1.5rem;
+  }
+
+  .hero-actions {
+    margin-top: 1.8rem;
+  }
+
+  .section {
+    padding-block: 4rem;
+  }
+
+  .section-heading .eyebrow {
+    margin-bottom: 1rem;
+  }
+
+  .education-preview-intro,
+  .about-preview-intro,
+  .experience-preview-intro,
+  .competencies-preview-intro,
+  .cases-intro,
+  .content-preview-intro,
+  .contact-preview-intro {
+    gap: 1.5rem;
+  }
+
+  .pillar-grid,
+  .about-preview-grid,
+  .experience-preview-track,
+  .competencies-preview-grid,
+  .education-preview-grid,
+  .cases-grid,
+  .content-preview-grid,
+  .contact-preview-panel {
+    margin-top: 2rem;
+  }
+
   .brand > span:last-child {
     display: none;
   }
@@ -3041,7 +3045,16 @@ h1 {
   }
 
   .case-card {
-    min-height: 400px;
+    min-height: auto;
+    padding: 1.25rem;
+  }
+
+  .case-card h3 {
+    margin-top: 1.5rem;
+  }
+
+  .case-card .tag-list {
+    margin-block: 1.1rem 0.7rem;
   }
 
   .education-preview-grid {
@@ -3074,7 +3087,20 @@ h1 {
   }
 
   .education-preview-card {
-    min-height: 220px;
+    min-height: auto;
+  }
+
+  .pillar-card,
+  .about-preview-card,
+  .competency-preview-card {
+    min-height: auto;
+    padding: 1.25rem;
+  }
+
+  .pillar-card h3,
+  .about-preview-card h3,
+  .competency-preview-card h3 {
+    margin-top: 1.35rem;
   }
 
   .education-preview-action,
@@ -3099,7 +3125,7 @@ h1 {
   .experience-preview-action .button,
   .competencies-preview-action .button,
   .content-preview-action .button {
-    width: 100%;
+    width: fit-content;
   }
 
   .contact-preview-panel {
@@ -3108,7 +3134,7 @@ h1 {
 
   .contact-preview-panel .button {
     grid-column: auto;
-    width: 100%;
+    width: fit-content;
   }
 
   .contact-preview-signal {
