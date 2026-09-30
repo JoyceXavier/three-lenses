@@ -25,6 +25,7 @@
     <title>Three Lenses | Tecnologia, Produto e Processos</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./menu.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -37,7 +38,18 @@
         <span>three lenses // v1</span>
       </a>
 
-      <nav class="site-nav" aria-label="Navegação principal">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-menu"
+        aria-label="Abrir menu"
+      >
+        <span>Menu</span>
+        <span class="menu-toggle-icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="site-menu" aria-label="Navegação principal">
         <a href="./index.html" aria-current="page">Home</a>
         <a href="./sobre.html">Sobre</a>
         <a href="./experiencia.html">Experiência</a>
@@ -55,9 +67,16 @@
           <p class="eyebrow"><span></span> Three Lenses // portfólio profissional</p>
           <h1>Tecnologia com contexto.<br />Produto com propósito.</h1>
           <p class="hero-intro">
-            Uma base em evolução para reunir projetos, decisões técnicas e aprendizados
-            com clareza, responsabilidade e foco em resultado.
+            Portfólio de uma Desenvolvedora de Software que conecta backend, dados,
+            infraestrutura, documentação e processos para construir soluções com contexto.
           </p>
+
+          <ul class="tag-list hero-focus" aria-label="Principais áreas de atuação">
+            <li>Backend</li>
+            <li>Dados</li>
+            <li>Infraestrutura</li>
+            <li>Produto &amp; Processos</li>
+          </ul>
 
           <div class="hero-actions">
             <a class="button button-primary" href="#cases">Conhecer os cases</a>
@@ -69,6 +88,10 @@
         <div class="section-heading">
           <p class="eyebrow">01 // estrutura</p>
           <h2 id="estrutura-titulo">Three Lenses: três perspectivas para contar cada trabalho.</h2>
+          <p class="section-lead structure-lead">
+            Cada case conecta decisões técnicas, necessidades reais e a forma como o
+            trabalho foi organizado.
+          </p>
         </div>
 
         <div class="pillar-grid">
@@ -130,7 +153,7 @@
         <div class="about-preview-action">
           <p>Mais contexto sobre como técnica, produto e processos se conectam na minha atuação.</p>
           <a class="button button-secondary" href="./sobre.html">
-            Ver detalhes sobre minha atuação <span aria-hidden="true">→</span>
+            Conhecer minha trajetória <span aria-hidden="true">→</span>
           </a>
         </div>
       </section>
@@ -189,7 +212,7 @@
             <p>Cargos formais e escopo real apresentados com clareza em cada etapa.</p>
           </div>
           <a class="button button-secondary" href="./experiencia.html">
-            Explorar trajetória <span aria-hidden="true">→</span>
+            Explorar experiência <span aria-hidden="true">→</span>
           </a>
         </div>
       </section>
@@ -249,7 +272,7 @@
         <div class="competencies-preview-action">
           <p>Seis grupos objetivos, sem percentuais ou rankings de proficiência.</p>
           <a class="button button-secondary" href="./competencias.html">
-            Ver detalhes das competências <span aria-hidden="true">→</span>
+            Explorar competências <span aria-hidden="true">→</span>
           </a>
         </div>
       </section>
@@ -311,7 +334,7 @@
         <div class="education-preview-action">
           <p>Datas e áreas de estudo confirmadas em uma visão completa.</p>
           <a class="button button-secondary" href="./formacao.html">
-            Explorar formação <span aria-hidden="true">→</span>
+            Ver formação completa <span aria-hidden="true">→</span>
           </a>
         </div>
       </section>
@@ -509,7 +532,7 @@
         <div class="content-preview-action">
           <p>Os primeiros conteúdos estão em preparação, sem publicações fictícias.</p>
           <a class="button button-secondary" href="./conteudos.html">
-            Explorar temas <span aria-hidden="true">→</span>
+            Ver conteúdos <span aria-hidden="true">→</span>
           </a>
         </div>
       </section>
@@ -542,9 +565,14 @@
               Para oportunidades profissionais, projetos ou troca de experiências,
               você pode me encontrar pelo LinkedIn ou entrar em contato por e-mail.
             </p>
+            <ul class="tag-list contact-preview-tags" aria-label="Motivos para contato">
+              <li>Oportunidades</li>
+              <li>Projetos</li>
+              <li>Troca de experiências</li>
+            </ul>
           </div>
           <a class="button button-secondary" href="./contato.html">
-            Ver canais de contato <span aria-hidden="true">→</span>
+            Entrar em contato <span aria-hidden="true">→</span>
           </a>
         </div>
       </section>

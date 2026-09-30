@@ -25,6 +25,7 @@
     <title>Experiência Profissional | Three Lenses</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./menu.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -36,7 +37,18 @@
         <span>three lenses // v1</span>
       </a>
 
-      <nav class="site-nav" aria-label="Navegação principal">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-menu"
+        aria-label="Abrir menu"
+      >
+        <span>Menu</span>
+        <span class="menu-toggle-icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+
+      <nav class="site-nav" id="site-menu" aria-label="Navegação principal">
         <a href="./index.html">Home</a>
         <a href="./sobre.html">Sobre</a>
         <a href="./experiencia.html" aria-current="page">Experiência</a>
@@ -73,7 +85,7 @@
             </div>
             <div>
               <dt>cargo atual</dt>
-              <dd>Desenvolvedora de Software Júnior</dd>
+              <dd>Desenvolvedora de Software</dd>
             </div>
           </dl>
         </aside>
@@ -239,10 +251,10 @@
               <header>
                 <div>
                   <p class="career-stage">desenvolvimento // atuação transversal</p>
-                  <h3>Progressão formal para Desenvolvedora de Software Júnior</h3>
+                  <h3>Desde jun/2026 — Desenvolvedora de Software</h3>
                 </div>
                 <span class="career-state is-current">
-                  cargo formal // Desenvolvedora de Software Júnior
+                  cargo formal // Desenvolvedora de Software
                 </span>
               </header>
               <p class="career-summary">
@@ -294,7 +306,7 @@
           <p>Competências, formação e cases complementam a trajetória com contexto.</p>
           <div>
             <a class="button button-secondary" href="./competencias.html">
-              Ver competências <span aria-hidden="true">→</span>
+              Explorar competências <span aria-hidden="true">→</span>
             </a>
             <a class="button button-primary" href="./index.html#cases">
               Ver cases <span aria-hidden="true">→</span>
