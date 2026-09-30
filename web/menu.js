@@ -60,3 +60,34 @@ if (header && toggle && menu) {
   mobileMenu.addEventListener("change", () => setMenuState(false));
   setMenuState(false);
 }
+
+const backToTop = document.querySelector("[data-back-to-top]");
+
+if (backToTop) {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let updateScheduled = false;
+
+  const updateBackToTop = () => {
+    const revealPoint = Math.max(640, window.innerHeight * 0.75);
+    backToTop.hidden = window.scrollY < revealPoint;
+    updateScheduled = false;
+  };
+
+  const scheduleBackToTopUpdate = () => {
+    if (!updateScheduled) {
+      updateScheduled = true;
+      window.requestAnimationFrame(updateBackToTop);
+    }
+  };
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: reducedMotion.matches ? "auto" : "smooth"
+    });
+  });
+
+  window.addEventListener("scroll", scheduleBackToTopUpdate, { passive: true });
+  window.addEventListener("resize", scheduleBackToTopUpdate);
+  updateBackToTop();
+}

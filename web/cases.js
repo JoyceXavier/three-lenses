@@ -203,6 +203,7 @@ if (!currentCase) {
   setMetaContent('meta[property="og:description"]', errorDescription);
   setMetaContent('meta[name="twitter:title"]', document.title);
   setMetaContent('meta[name="twitter:description"]', errorDescription);
+  document.querySelector("[data-case-breadcrumb]").textContent = "Case não encontrado";
 } else {
   const setText = (selector, value) => {
     document.querySelector(selector).textContent = value;
@@ -216,6 +217,7 @@ if (!currentCase) {
   setMetaContent('meta[name="twitter:description"]', currentCase.summary);
 
   setText("[data-case-kicker]", `case // ${currentId}`);
+  setText("[data-case-breadcrumb]", `Case ${currentId}`);
   setText("[data-case-title]", currentCase.title);
   setText("[data-case-summary]", currentCase.summary);
   setText("[data-case-status]", currentCase.status);
@@ -249,13 +251,11 @@ if (!currentCase) {
 
   if (currentIndex > 0) {
     previousLink.href = `./case.html?id=${ids[currentIndex - 1]}`;
-  } else {
-    previousLink.hidden = true;
+    previousLink.hidden = false;
   }
 
   if (currentIndex < ids.length - 1) {
     nextLink.href = `./case.html?id=${ids[currentIndex + 1]}`;
-  } else {
-    nextLink.hidden = true;
+    nextLink.hidden = false;
   }
 }

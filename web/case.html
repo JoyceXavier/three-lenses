@@ -62,6 +62,14 @@
     </header>
 
     <main class="case-page" id="conteudo">
+      <nav class="case-breadcrumb shell" aria-label="Trilha de navegação">
+        <ol>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./index.html#cases">Cases</a></li>
+          <li><span aria-current="page" data-case-breadcrumb>Case --</span></li>
+        </ol>
+      </nav>
+
       <section class="case-hero shell" data-case-view>
         <div>
           <p class="case-kicker" data-case-kicker>case // --</p>
@@ -115,8 +123,9 @@
           </aside>
 
           <nav class="case-pagination" aria-label="Navegação entre cases">
-            <a data-previous-case href="#"><span aria-hidden="true">←</span> Case anterior</a>
-            <a data-next-case href="#">Próximo case <span aria-hidden="true">→</span></a>
+            <a data-previous-case hidden><span aria-hidden="true">←</span> Case anterior</a>
+            <a class="case-pagination-return" href="./index.html#cases">Voltar aos cases</a>
+            <a data-next-case hidden>Próximo case <span aria-hidden="true">→</span></a>
           </nav>
         </div>
       </section>
@@ -128,6 +137,11 @@
         <a class="button button-primary" href="./index.html#cases">Ver todos os cases</a>
       </section>
     </main>
+
+    <button class="back-to-top" type="button" data-back-to-top hidden>
+      <span aria-hidden="true">↑</span>
+      Voltar ao topo
+    </button>
 
     <footer class="site-footer shell">
       <span>Preview sanitizado</span>
