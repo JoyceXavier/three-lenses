@@ -17,8 +17,7 @@ const cases = {
     result:
       "Os ajustes permitiram restabelecer o funcionamento esperado da integração. Não há métricas públicas confirmadas, e a versão atual preserva apenas o recorte técnico necessário para contar o desafio.",
     learning:
-      "Capacidade de entrar em uma tecnologia ainda desconhecida, compreender um sistema preexistente e contribuir de forma responsável para um problema real de integração.",
-    status: "preview sanitizado"
+      "Capacidade de entrar em uma tecnologia ainda desconhecida, compreender um sistema preexistente e contribuir de forma responsável para um problema real de integração."
   },
   "02": {
     title: "Portal de dados para parceiros",
@@ -47,39 +46,37 @@ const cases = {
     result:
       "O portal permanece como um produto real de consulta e exportação para parceiros e equipe interna. A versão pública não apresenta endereço, nomes, volumes ou dados comerciais.",
     learning:
-      "A experiência consolidou responsabilidade operacional sobre backend, dados, infraestrutura e publicação de um produto usado fora da equipe de desenvolvimento.",
-    status: "preview sanitizado"
+      "A experiência consolidou responsabilidade operacional sobre backend, dados, infraestrutura e publicação de um produto usado fora da equipe de desenvolvimento."
   },
   "03": {
-    title: "Gestão de chamados e prazos",
+    title: "Sistema de Chamados + Samara",
     summary:
-      "Sistema corporativo de acompanhamento de chamados com sinalização visual para situações próximas do vencimento.",
+      "Atuação no sistema corporativo de chamados e criação posterior da Samara para automatizar avisos de prazo e finalizações.",
     tags: [
       "Backend",
-      "Dados",
+      "Banco de dados",
       "Infraestrutura",
-      "Regras de prazo",
-      "Servidores",
-      "Publicação",
-      "Sustentação",
+      "Requisitos",
+      "Regras de negócio",
+      "Automação",
+      "Sincronização",
+      "Mensageria",
       "Samara"
     ],
     context:
-      "Um sistema corporativo de maior porte apoiava abertura, acompanhamento e gestão de chamados. A personagem Samara fazia parte da sinalização de situações próximas do prazo.",
+      "O Sistema de Chamados era uma solução corporativa preexistente para abertura, acompanhamento e gestão de solicitações. Nesse sistema original, Joyce foi responsável por backend, banco de dados e infraestrutura, além de participar da coleta de requisitos e da definição de regras de negócio.",
     challenge:
-      "Transformar o prazo em informação percebida pelo usuário e dar visibilidade ao que exigia atenção, sem publicar regras internas ou atribuir autoria ainda não confirmada.",
+      "Sustentar e evoluir as camadas técnicas do sistema a partir das necessidades operacionais e, em uma etapa posterior, automatizar o acompanhamento de prazos e o encerramento de chamados conforme as regras do processo.",
     contributions: [
-      "Atuação em backend, banco de dados e regras de negócio.",
-      "Configuração de servidores, publicação e sustentação.",
-      "Troubleshooting de uma aplicação de maior porte.",
-      "Tecnologias, autoria da personagem e resultados ainda pendentes."
+      "Responsabilidade pelo backend, banco de dados e infraestrutura do sistema corporativo original.",
+      "Participação na coleta de requisitos e na definição de regras de negócio.",
+      "Documentação técnica concentrada em comentários JSDoc no código e testes básicos de services e controllers.",
+      "Criação da Samara: estrutura do serviço, regras de automação, rotinas de sincronização, camada de banco e mecanismo de avisos e mensageria."
     ],
     result:
-      "O resultado observável ainda precisa ser levantado. Por isso, esta página permanece como conteúdo em revisão e não apresenta métricas, alcance ou afirmações não confirmadas.",
+      "Como evolução posterior do sistema, a Samara passou a avisar chamados a dois dias do vencimento e a finalizar automaticamente aqueles com status “pendente de finalização”, conforme a regra do processo.",
     learning:
-      "O projeto marcou uma evolução prática em backend, dados, infraestrutura e operação de aplicações com maior complexidade.",
-    status: "conteúdo em revisão",
-    draft: true
+      "A experiência conectou backend, dados, infraestrutura e regras de negócio à criação de uma automação com responsabilidades próprias, mantendo clara a diferença entre contribuir para um sistema preexistente e desenvolver sua evolução posterior."
   },
   "04": {
     title: "Plataforma de conteúdo digital para lojas",
@@ -109,8 +106,7 @@ const cases = {
     result:
       "A plataforma reuniu distribuição de conteúdo, atualização em tempo real, continuidade local e suporte a diferentes superfícies em um mesmo ecossistema. Não há métricas públicas confirmadas.",
     learning:
-      "Experiência com aplicações distribuídas, comunicação em tempo real, comportamento offline e decisões construídas na fronteira entre Tecnologia, Marketing e operação.",
-    status: "preview sanitizado"
+      "Experiência com aplicações distribuídas, comunicação em tempo real, comportamento offline e decisões construídas na fronteira entre Tecnologia, Marketing e operação."
   },
   "05": {
     title: "Plataforma de NPS em tempo real",
@@ -141,8 +137,7 @@ const cases = {
     result:
       "A nova base conectou captura, processamento e entrega de atualizações em tempo real. O NPS passou a usar a regra corrigida e ganhou contexto com o indicador de adesão, sem divulgar números internos.",
     learning:
-      "O case consolidou arquitetura orientada a eventos, observabilidade e diagnóstico de sistemas distribuídos, conectando decisões técnicas à confiabilidade de indicadores de negócio.",
-    status: "preview sanitizado"
+      "O case consolidou arquitetura orientada a eventos, observabilidade e diagnóstico de sistemas distribuídos, conectando decisões técnicas à confiabilidade de indicadores de negócio."
   },
   "06": {
     title: "Integração de pedidos e pré-faturamento",
@@ -172,8 +167,7 @@ const cases = {
     result:
       "O fluxo passou a conectar pedido externo, tratamento pela filial e geração de pré-fatura de forma controlada. A camada intermediária concentrou validações, transformação e rastreabilidade.",
     learning:
-      "Integração não é apenas transporte de dados: frequentemente exige traduzir modelos, regras e contexto operacional entre sistemas com responsabilidades distintas.",
-    status: "preview sanitizado"
+      "Integração não é apenas transporte de dados: frequentemente exige traduzir modelos, regras e contexto operacional entre sistemas com responsabilidades distintas."
   }
 };
 
@@ -220,15 +214,10 @@ if (!currentCase) {
   setText("[data-case-breadcrumb]", `Case ${currentId}`);
   setText("[data-case-title]", currentCase.title);
   setText("[data-case-summary]", currentCase.summary);
-  setText("[data-case-status]", currentCase.status);
   setText("[data-case-context]", currentCase.context);
   setText("[data-case-challenge]", currentCase.challenge);
   setText("[data-case-result]", currentCase.result);
   setText("[data-case-learning]", currentCase.learning);
-
-  if (currentCase.draft) {
-    document.querySelector("[data-case-status]").classList.add("is-draft");
-  }
 
   const tags = document.querySelector("[data-case-tags]");
   currentCase.tags.forEach((tag) => {
